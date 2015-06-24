@@ -5,7 +5,7 @@
     },
     'targets': [
         {
-            'target_name': 'node-opus',
+            'target_name': 'electron-opus-<@(target_arch)',
             'dependencies': [
                 'deps/binding.gyp:libopus'
             ],
@@ -38,7 +38,8 @@
                 'DYNAMIC_ANNOTATIONS_ENABLED=0'
             ],
             'include_dirs': [
-                "<!(node -e \"require('nan')\")"
+                "<!(node -e \"require('nan')\")",
+                "<!(node -e \"require('electron-updater-tools')\")"
             ],
             'sources': [
                 'src/node-opus.cc',

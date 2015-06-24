@@ -1,15 +1,16 @@
 {
-  "name": "node-opus",
-  "description": "NodeJS native binding to OPUS",
+  "name": "electron-opus",
+  "description": "Electron native binding to OPUS",
   "version": "0.1.10",
-  "author": "Mikko Rantanen <jubjub@jubjubnest.net>",
-  "homepage": "https://github.com/Rantanen/node-opus",
-  "bugs": "https://github.com/Rantanen/node-opus/issues",
+  "author": "Justin Chase <justin@evolvelabs.com>",
+  "homepage": "https://github.com/EvolveLabs/electron-opus",
+  "bugs": "https://github.com/EvolveLabs/electron-opus/issues",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "http://github.com/Rantanen/node-opus.git"
+    "url": "http://github.com/EvolveLabs/electron-opus.git"
   },
+  "main": "index.js",
   "//": "Platform limitations is due to lack of config.h files. See README.md for more information.",
   "os": [
     "linux",
@@ -21,11 +22,17 @@
     "arm"
   ],
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=2.3.0"
   },
+  "binaries": [
+    "https://s3.amazonaws.com/evolve-bin/{name}/{name}-{version}-{platform}-{arch}-{configuration}-{channel}.tgz"
+  ],
   "dependencies": {
     "bindings": "~1.2.1",
     "nan": "~1.8.4",
     "ogg-packet": "^1.0.0"
+  },
+  "devDependencies": {
+    "electron-updater-tools": "~0.0.5"
   }
 }
