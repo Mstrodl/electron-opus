@@ -49,7 +49,19 @@
                 ],
                 'libraries': [
                 ]
-            }
+            },
+            'target_conditions': [
+              [ 'OS=="win"', {
+                    'msvs_settings': {
+                        'VCLinkerTool': {
+                            'DelayLoadDLLs': [ 'node.dll', 'iojs.exe', 'node.exe' ],
+                            # Don't print a linker warning when no imports from either .exe
+                            # are used.
+                            'AdditionalOptions': [ '/ignore:4199' ],
+                        }
+                    }
+                }]
+            ]
         }
     ]
 }
