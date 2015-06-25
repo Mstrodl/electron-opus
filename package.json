@@ -11,6 +11,9 @@
     "url": "http://github.com/EvolveLabs/electron-opus.git"
   },
   "main": "index.js",
+  "scripts": {
+    "install": "bash ./node_modules/.bin/elinst"
+  },
   "//": "Platform limitations is due to lack of config.h files. See README.md for more information.",
   "os": [
     "linux",
@@ -23,17 +26,18 @@
     "ia86"
   ],
   "engines": {
-    "node": ">=2.3.0"
+    "node": ">=2.2.1"
   },
   "binaries": [
     "https://s3.amazonaws.com/evolve-bin/{name}/{name}-{version}-{platform}-{arch}-{configuration}-{channel}.tgz"
   ],
   "dependencies": {
     "bindings": "~1.2.1",
-    "nan": "~1.8.4",
-    "ogg-packet": "^1.0.0"
+    "electron-ogg-packet": "^1.0.0",
+    "electron-updater-tools": "~0.0.x"
   },
   "devDependencies": {
-    "electron-updater-tools": "~0.0.5"
-  }
+    "nan": "~1.8.4"
+  },
+  "bundledDependencies": [ "electron-updater-tools" ]
 }
