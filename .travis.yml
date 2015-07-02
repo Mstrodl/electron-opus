@@ -51,4 +51,4 @@ after_success:
   - if [ $TRAVIS_OS_NAME != osx ]; then elpack --configuration release --arch ia32; fi
   # publish to s3
   - if [ $PUBLISH_BINARY == true ]; then elpub -b evolve-bin -i $s3accessKeyId -k $s3secretAccessKey -C release -a x64; fi
-  - if [ $PUBLISH_BINARY == true ] && [ $TRAVIS_OS_NAME != osx ]; then elpub -b evolve-bin -i $s3accessKeyId -k $s3secretAccessKey -C release -a ia32; fi
+  - if [ $PUBLISH_BINARY == true ] && [ $TRAVIS_OS_NAME != osx ]; then elpub -b evolve-bin -i $s3accessKeyId -k $s3secretAccessKey -C release -a ia32; fi 
