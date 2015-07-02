@@ -1,7 +1,7 @@
 {
   "name": "electron-opus",
   "description": "Electron native binding to OPUS",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "author": "Justin Chase <justin@evolvelabs.com>",
   "homepage": "https://github.com/EvolveLabs/electron-opus",
   "bugs": "https://github.com/EvolveLabs/electron-opus/issues",
@@ -29,12 +29,12 @@
     "node": ">=2.2.1"
   },
   "binaries": [
-    "https://s3.amazonaws.com/evolve-bin/{name}/{name}-{version}-{platform}-{arch}-{configuration}-{channel}.tgz"
+    "https://s3.amazonaws.com/evolve-bin/{name}/{name}-{version}-{platform}-{arch}-{configuration}.tgz"
   ],
   "dependencies": {
     "bindings": "~1.2.1",
     "electron-ogg-packet": "^1.0.0",
-    "electron-updater-tools": "~0.0.x"
+    "electron-updater-tools": "~0.1.x"
   },
   "devDependencies": {
     "nan": "~1.8.4"
