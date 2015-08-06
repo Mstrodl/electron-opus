@@ -1,7 +1,7 @@
 {
   "name": "electron-opus",
   "description": "Electron native binding to OPUS",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "author": "Justin Chase <justin@evolvelabs.com>",
   "homepage": "https://github.com/EvolveLabs/electron-opus",
   "bugs": "https://github.com/EvolveLabs/electron-opus/issues",
