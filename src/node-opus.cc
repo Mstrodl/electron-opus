@@ -105,7 +105,7 @@ class OpusEncoder : public ObjectWrap {
 			int compressedLength = opus_encode( self->encoder, pcm, frameSize, &(self->outOpus[0]), maxPacketSize );
 
 			// Create a new result buffer.
-			Local<Object> actualBuffer = Nan::NewBuffer(reinterpret_cast<char*>(self->outOpus), compressedLength ).ToLocalChecked();
+			Local<Object> actualBuffer = Nan::CopyBuffer(reinterpret_cast<char*>(self->outOpus), compressedLength ).ToLocalChecked();
 			info.GetReturnValue().Set( actualBuffer );
 		}
 
@@ -134,7 +134,7 @@ class OpusEncoder : public ObjectWrap {
 
 			// Create a new result buffer.
 			int decodedLength = decodedSamples * 2 * self->channels;
-			Local<Object> actualBuffer = Nan::NewBuffer( reinterpret_cast<char*>(self->outPcm), decodedLength ).ToLocalChecked();
+			Local<Object> actualBuffer = Nan::CopyBuffer( reinterpret_cast<char*>(self->outPcm), decodedLength ).ToLocalChecked();
 			info.GetReturnValue().Set( actualBuffer );
 		}
 
