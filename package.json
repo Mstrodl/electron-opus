@@ -14,9 +14,6 @@
     "url": "http://github.com/EvolveLabs/electron-opus.git"
   },
   "main": "index.js",
-  "scripts": {
-    "install": "bash ./node_modules/.bin/elinst"
-  },
   "//": "Platform limitations is due to lack of config.h files. See README.md for more information.",
   "os": [
     "linux",
